@@ -6,6 +6,8 @@ __pycache__/
 # db configs
 db_config.py
 
+db.sqlite3
+
 .DS_Store
 *.pyc
 
