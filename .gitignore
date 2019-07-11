@@ -11,6 +11,10 @@ db.sqlite3
 .DS_Store
 *.pyc
 
+# static files
+/media
+/static
+
 # C extensions
 *.so
 
