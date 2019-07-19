@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from . import db_config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
+    'listings.apps.ListingsConfig',
+    'realtors.apps.RealtorsConfig',
 ]
 
 MIDDLEWARE = [
@@ -79,8 +82,12 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': db_config.database,
+        'USER': db_config.user,
+        'PASSWORD': db_config.passwd,
+        'HOST': db_config.local_host,
+        'PORT': '3306',
     }
 }
 
