@@ -131,6 +131,16 @@
     <div class="container">
       <h3 class="text-center mb-3">Latest Listings</h3>
       <div class="row">
+
+        {% if listings %}
+          {% for listing in listings %}
+          {% endfor %}
+        {% else %}
+          <div class="col-md-12">
+            <p>No Listings Avaailable</p>
+          </div>
+        {% endif %}
+
         <!-- Listing 1 -->
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="card listing-preview">
