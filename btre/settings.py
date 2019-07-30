@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'listings.apps.ListingsConfig',
     'realtors.apps.RealtorsConfig',
     'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
 ]
 
 MIDDLEWARE = [
@@ -149,6 +150,14 @@ MESSAGE_TAGS = {
     messages.INFO: 'info',
     messages.ERROR: 'danger',
 }
+
+
+# Email config: search django email
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'sanking.saphira@gmail.com'
+EMAIL_HOST_PASSWORD = 'Saphira88730917Google'
+EMAIL_USE_TLS = True
 
 
 
